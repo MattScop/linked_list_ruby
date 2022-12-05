@@ -15,4 +15,10 @@ class LinkedList
     #we are at the end
     head.next_node = new_node
   end
+
+  def prepend(value)
+    old_head = @head
+    new_node = Node.new(value, old_head)
+    @head = new_node
+  end
 end
