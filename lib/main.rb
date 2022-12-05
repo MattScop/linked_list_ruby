@@ -17,3 +17,10 @@ linked_list = LinkedList.new
 # linked_list.prepend(5)
 # puts linked_list.head.value
 # puts linked_list.head.next_node.value
+
+# SIZE (4)
+# linked_list.append(10)
+# linked_list.append(20)
+# linked_list.prepend(5)
+# linked_list.prepend(2)
+# puts linked_list.size
