@@ -36,4 +36,9 @@ class LinkedList
   def head_node
     head
   end
+
+  def tail_node
+    @head = head.next_node until head.next_node.nil?
+    head #tail
+  end
 end
