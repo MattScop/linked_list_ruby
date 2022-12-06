@@ -24,12 +24,16 @@ class LinkedList
 
   def size
     return 0 if head.nil?
-    
+
     counter = 1
     until head.next_node.nil?
       counter += 1
       @head = head.next_node
     end
     counter
+  end
+
+  def head_node
+    head
   end
 end

@@ -24,3 +24,8 @@ linked_list = LinkedList.new
 # linked_list.prepend(5)
 # linked_list.prepend(2)
 # puts linked_list.size
+
+# HEAD (10)
+# linked_list.append(10)
+# linked_list.append(20)
+# puts linked_list.head_node.value
