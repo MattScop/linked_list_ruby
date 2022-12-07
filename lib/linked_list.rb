@@ -110,4 +110,20 @@ class LinkedList
     end
     nil
   end
+
+  def to_s
+    return p nil if head.nil?
+
+    current_node = @head
+    ll = ''
+    until current_node.nil?
+      if current_node.next_node.nil?
+        ll += "(#{current_node.value}) -> nil"
+      else
+        ll += "(#{current_node.value}) -> "
+      end
+      current_node = current_node.next_node
+    end
+    print "#{ll}\n"
+  end
 end

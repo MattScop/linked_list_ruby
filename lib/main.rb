@@ -95,3 +95,14 @@ linked_list = LinkedList.new
 # linked_list.prepend(5)
 # linked_list.append(50)
 # p linked_list.find(30)
+
+# TO_S
+# linked_list.append(10)
+# linked_list.append(20)
+# linked_list.append(30)
+# linked_list.append(40)
+# linked_list.prepend(5)
+# linked_list.prepend(2)
+# linked_list.prepend(3)
+# linked_list.append(50)
+# linked_list.to_s
