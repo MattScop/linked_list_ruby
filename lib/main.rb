@@ -76,15 +76,13 @@ linked_list = LinkedList.new
 # linked_list.print_ll
 
 # CONTAINS? (true), (false)
-linked_list.append(10)
-linked_list.append(20)
-linked_list.append(30)
-linked_list.append(40)
-linked_list.prepend(5)
-linked_list.prepend(2)
-linked_list.prepend(3)
-linked_list.append(50)
-puts linked_list.contains?(10)
-puts linked_list.contains?(0)
-
-######## REFACTOR SIZE METHOD
+# linked_list.append(10)
+# linked_list.append(20)
+# linked_list.append(30)
+# linked_list.append(40)
+# linked_list.prepend(5)
+# linked_list.prepend(2)
+# linked_list.prepend(3)
+# linked_list.append(50)
+# puts linked_list.contains?(10)
+# puts linked_list.contains?(0)
