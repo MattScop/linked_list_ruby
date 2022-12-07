@@ -70,4 +70,22 @@ class LinkedList
     end
     current_node.value
   end
+
+  def pop
+    case self.size
+    when 0 then return p nil
+    when 1
+      popped_node = @head
+      @head = nil
+      return popped_node.value
+    else
+      current_node = @head
+      until current_node.next_node.next_node.nil? #check if the last_node's next_node is nil
+        current_node = current_node.next_node
+      end
+      last_node = current_node.next_node.value
+      current_node.next_node = nil #pop the last_node
+      last_node #returns the popped element
+    end
+  end
 end
