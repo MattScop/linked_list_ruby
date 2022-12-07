@@ -59,9 +59,8 @@ class LinkedList
     current_node.value #tail
   end
 
-  #at(index) returns the node at the given index
   def at(index)
-    return nil if index > self.size
+    return p nil if index >= self.size
 
     counter = 0
     current_node = @head
