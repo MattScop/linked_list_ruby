@@ -60,7 +60,7 @@ class LinkedList
   end
 
   def at(index)
-    return p nil if index >= self.size
+    return nil if index >= self.size
 
     counter = 0
     current_node = @head
@@ -73,7 +73,7 @@ class LinkedList
 
   def pop
     case self.size
-    when 0 then return p nil
+    when 0 then return nil
     when 1
       popped_node = @head
       @head = nil
@@ -97,5 +97,17 @@ class LinkedList
       current_node = current_node.next_node
     end
     false
+  end
+
+  def find(value)
+    counter = 0
+    current_node = @head
+    until current_node.nil?
+      return counter if current_node.value == value
+
+      counter += 1
+      current_node = current_node.next_node
+    end
+    nil
   end
 end

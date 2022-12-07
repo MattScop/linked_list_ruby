@@ -61,7 +61,7 @@ linked_list = LinkedList.new
 # linked_list.prepend(2)
 # linked_list.prepend(3)
 # linked_list.append(50)
-# puts linked_list.at(1)
+# p linked_list.at(1)
 
 # POP (50)
 # linked_list.append(10)
@@ -72,7 +72,7 @@ linked_list = LinkedList.new
 # linked_list.prepend(2)
 # linked_list.prepend(3)
 # linked_list.append(50)
-# puts linked_list.pop
+# p linked_list.pop
 # linked_list.print_ll
 
 # CONTAINS? (true), (false)
@@ -86,3 +86,12 @@ linked_list = LinkedList.new
 # linked_list.append(50)
 # puts linked_list.contains?(10)
 # puts linked_list.contains?(0)
+
+# FIND (3)
+# linked_list.append(10)
+# linked_list.append(20)
+# linked_list.append(30)
+# linked_list.append(40)
+# linked_list.prepend(5)
+# linked_list.append(50)
+# p linked_list.find(30)
