@@ -88,4 +88,14 @@ class LinkedList
       last_node #returns the popped element
     end
   end
+
+  def contains?(value)
+    current_node = @head
+    until current_node.nil?
+      return true if current_node.value == value
+
+      current_node = current_node.next_node
+    end
+    false
+  end
 end
