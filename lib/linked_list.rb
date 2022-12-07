@@ -7,16 +7,31 @@ class LinkedList
     @head = nil
   end
 
+  def print_ll
+    return p nil if head.nil?
+
+    current_node = @head
+    counter = 0
+    while counter < self.size
+      puts current_node.value
+      current_node = current_node.next_node
+      counter += 1
+    end
+  end
+
   def append(value)
     new_node = Node.new(value)
     return @head = new_node if head.nil? #first_value
 
-    @head = head.next_node until head.next_node.nil?
+    current_node = @head
+    current_node = current_node.next_node until current_node.next_node.nil?
     #we are at the end
-    head.next_node = new_node
+    current_node.next_node = new_node
   end
 
   def prepend(value)
+    return @head = Node.new(value) if head.nil? #first_value
+
     old_head = @head
     new_node = Node.new(value, old_head)
     @head = new_node
@@ -26,19 +41,34 @@ class LinkedList
     return 0 if head.nil?
 
     counter = 1
-    until head.next_node.nil?
+    current_node = @head
+    until current_node.next_node.nil?
       counter += 1
-      @head = head.next_node
+      current_node = current_node.next_node
     end
     counter
   end
 
   def head_node
-    head
+    @head.value
   end
 
   def tail_node
-    @head = head.next_node until head.next_node.nil?
-    head #tail
+    current_node = @head
+    current_node = current_node.next_node until current_node.next_node.nil?
+    current_node.value #tail
+  end
+
+  #at(index) returns the node at the given index
+  def at(index)
+    return nil if index > self.size
+
+    counter = 0
+    current_node = @head
+    until counter == index
+      counter += 1
+      current_node = current_node.next_node
+    end
+    current_node.value
   end
 end

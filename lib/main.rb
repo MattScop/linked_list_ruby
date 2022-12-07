@@ -4,35 +4,61 @@ linked_list = LinkedList.new
 
 # APPEND (10)-->(20)-->(30)-->(40)
 # linked_list.append(10)
-# puts linked_list.head.value
 # linked_list.append(20)
-# puts linked_list.head.next_node.value
 # linked_list.append(30)
-# puts linked_list.head.next_node.value
 # linked_list.append(40)
-# puts linked_list.head.next_node.value
+# linked_list.print_ll
 
-# PREPEND (5)-->(10)
-# linked_list.append(10)
-# linked_list.prepend(5)
-# puts linked_list.head.value
-# puts linked_list.head.next_node.value
-
-# SIZE (4)
+# PREPEND (1)-->(5)-->(10)-->(20)-->(30)-->(40)-->(50)
 # linked_list.append(10)
 # linked_list.append(20)
+# linked_list.append(30)
+# linked_list.append(40)
+# linked_list.prepend(5)
+# linked_list.prepend(1)
+# linked_list.append(50)
+# linked_list.print_ll
+
+# SIZE (8)
+# linked_list.append(10)
+# linked_list.append(20)
+# linked_list.append(30)
+# linked_list.append(40)
 # linked_list.prepend(5)
 # linked_list.prepend(2)
+# linked_list.prepend(3)
+# linked_list.append(50)
 # puts linked_list.size
 
-# HEAD (10)
+# HEAD (3)
 # linked_list.append(10)
 # linked_list.append(20)
-# puts linked_list.head_node.value
+# linked_list.append(30)
+# linked_list.append(40)
+# linked_list.prepend(5)
+# linked_list.prepend(2)
+# linked_list.prepend(3)
+# linked_list.append(50)
+# puts linked_list.head_node
 
-# TAIL (40)
-linked_list.append(10)
-linked_list.append(20)
-linked_list.append(30)
-linked_list.append(40)
-puts linked_list.tail_node.value
+# TAIL (50)
+# linked_list.append(10)
+# linked_list.append(20)
+# linked_list.append(30)
+# linked_list.append(40)
+# linked_list.prepend(5)
+# linked_list.prepend(2)
+# linked_list.prepend(3)
+# linked_list.append(50)
+# puts linked_list.tail_node
+
+# AT (2)
+# linked_list.append(10)
+# linked_list.append(20)
+# linked_list.append(30)
+# linked_list.append(40)
+# linked_list.prepend(5)
+# linked_list.prepend(2)
+# linked_list.prepend(3)
+# linked_list.append(50)
+# puts linked_list.at(1)
