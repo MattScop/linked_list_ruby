@@ -122,3 +122,17 @@ linked_list = LinkedList.new
 # linked_list.insert_at(8, 2)
 # linked_list.insert_at(60, -1)
 # linked_list.to_s
+
+# REMOVE_AT (2) -> (5) -> (20) -> (30) -> (40) -> nil
+# linked_list.append(10)
+# linked_list.append(20)
+# linked_list.append(30)
+# linked_list.append(40)
+# linked_list.prepend(5)
+# linked_list.prepend(2)
+# linked_list.prepend(3)
+# linked_list.append(50)
+# linked_list.remove_at(0)
+# linked_list.remove_at(2)
+# linked_list.remove_at(-1)
+# linked_list.to_s

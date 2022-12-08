@@ -160,4 +160,29 @@ class LinkedList
       new_node.next_node = next_node
     end
   end
+
+  def remove_at(index)
+    current_node = @head
+    counter = 0
+    case index
+    when 0
+      return @head = current_node.next_node
+    when -1
+      index = self.size - 1 #set the index to the last index
+      while counter < index
+        previous_node = current_node if counter == index - 1 #save the node before the one to be removed
+        counter += 1
+        current_node = current_node.next_node
+      end
+      return previous_node.next_node = nil
+    else
+      while counter < index
+        previous_node = current_node if counter == index - 1 #save the node before the one to be removed
+        counter += 1
+        current_node = current_node.next_node
+      end
+      next_node = current_node.next_node
+      previous_node.next_node = next_node
+    end
+  end
 end
