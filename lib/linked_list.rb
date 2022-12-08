@@ -64,6 +64,7 @@ class LinkedList
 
     counter = 0
     current_node = @head
+    index = self.size - 1 if index == -1 #set the index to tail if a value of -1 is given
     until counter == index
       counter += 1
       current_node = current_node.next_node
@@ -125,5 +126,38 @@ class LinkedList
       current_node = current_node.next_node
     end
     print "#{ll}\n"
+  end
+
+  def insert_at(value, index)
+    string = "No value at the given index"
+    return p string if index > self.size
+
+    new_node = Node.new(value)
+    current_node = @head
+    idx = 0
+    case index
+    when 0
+      old_head = @head
+      return @head = Node.new(value, old_head)
+    when -1
+      index = self.size - 1
+      while idx < index
+        idx += 1
+        current_node = current_node.next_node
+      end
+      return current_node.next_node = new_node
+    else
+      while idx < index
+        if idx == index - 1 #check for the second_last_one
+          previous_node = current_node
+          next_node = current_node.next_node
+        end
+        idx += 1
+        current_node = current_node.next_node
+      end
+      #insert between the previous and the next node
+      previous_node.next_node = new_node
+      new_node.next_node = next_node
+    end
   end
 end

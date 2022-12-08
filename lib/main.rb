@@ -62,6 +62,8 @@ linked_list = LinkedList.new
 # linked_list.prepend(3)
 # linked_list.append(50)
 # p linked_list.at(1)
+# p linked_list.at(0)
+# p linked_list.at(-1)
 
 # POP (50)
 # linked_list.append(10)
@@ -105,4 +107,18 @@ linked_list = LinkedList.new
 # linked_list.prepend(2)
 # linked_list.prepend(3)
 # linked_list.append(50)
+# linked_list.to_s
+
+# INSERT_AT (1) -> (3) -> (2) -> (8) -> (5) -> (10) -> (20) -> (30) -> (40) -> (50) -> (60) -> nil
+# linked_list.append(10)
+# linked_list.append(20)
+# linked_list.append(30)
+# linked_list.append(40)
+# linked_list.prepend(5)
+# linked_list.prepend(2)
+# linked_list.prepend(3)
+# linked_list.append(50)
+# linked_list.insert_at(1, 0)
+# linked_list.insert_at(8, 2)
+# linked_list.insert_at(60, -1)
 # linked_list.to_s
